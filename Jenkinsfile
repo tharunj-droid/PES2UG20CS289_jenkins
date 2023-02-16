@@ -10,7 +10,7 @@ pipeline {
     
     stage('Test') {
       steps {
-        sh './jenk'
+        sh './jenk'k
       }
     }
     

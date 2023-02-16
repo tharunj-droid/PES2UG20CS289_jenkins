@@ -30,4 +30,5 @@ pipeline {
       echo 'pipeline isn1t successful'
     }
   }
+  }
 }

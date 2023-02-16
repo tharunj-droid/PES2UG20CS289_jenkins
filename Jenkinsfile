@@ -2,33 +2,28 @@ pipeline {
   agent any
 
   stages {
- 
- 
-    stage('build') {
+    stage('Build') {
       steps {
         sh 'g++ jenk.cpp -o jenk'
       }
     }
-
-   
-    stage('test') {
+    
+    stage('Test') {
       steps {
         sh './jenk'
       }
     }
-   
-
-    stage('deploy') {
+    
+    stage('Deploy') {
       steps {
+        echo 'Deployed!'
       }
     }
+  }
   
- 
- 
   post {
     failure {
-      echo 'pipeline isn1t successful'
+      echo 'Pipeline failed'
     }
-  }
   }
 }

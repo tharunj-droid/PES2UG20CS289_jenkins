@@ -16,7 +16,7 @@ pipeline {
     
     stage('Deploy') {
       steps {
-        echo '/DEPART/services'
+        sh '/DEPART/services'
       }
     }
   }
